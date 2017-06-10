@@ -2,7 +2,6 @@ import React from 'react'
 
 
 export const Comment = ({author, content, removeComment}) => {
-  console.log(author, content)
   return (<div>
     <div>author : {author}</div>
     <div>content : {content}</div>

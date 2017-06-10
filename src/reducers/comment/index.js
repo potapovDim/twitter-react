@@ -18,8 +18,10 @@ export const removeComment = (commentId) => ({type: REMOVE_COMMENT, commentId})
 
 export default (state=initialState, action) => {
   switch (action.type) {
-    case ADD_COMMENT:
-      return state.push(action.comment)
+    case ADD_COMMENT: {
+      state[state.length] = action.comment
+      return [...state]
+    }
     case REMOVE_COMMENT:
       return state.filter(comment => comment.id !== action.commentId)
     default:

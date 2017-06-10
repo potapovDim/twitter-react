@@ -1,7 +1,10 @@
 import React from 'react'
 import {Comment, AddComment} from './comment'
 
-export const Twitt = ({content, twitComments, authorId, removeComment, addComment, removeTwitt, users}) => {
+export const Twitt = ({content, twitComments, authorId, removeComment, submitNewComment, removeTwitt, users, id}) => {
+  const addComment = (content) => {
+    submitNewComment(id, content)
+  }
   let twittAuthor = null
   users.forEach(user => {
         if(user.id === authorId) twittAuthor = user.name

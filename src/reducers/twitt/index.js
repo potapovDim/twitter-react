@@ -20,24 +20,12 @@ export default (state = initialState, action) => {
   const newState = {...state}
   switch (action.type) {
     case ADD_TWITT: {
-        newState.push(action.twitt)
-        return newState
+        state[state.length] = action.twitt
+        return [...state]
       }
     case REMOVE_TWITT: {
         return newState.filter(twitt => twitt.id !== action.a)
       }
-    case ADD_COMMENT: {
-      state.forEach(twitt => {
-        twitt.id === action.comment.twitId && twitt.comments.push(action.comment.id)
-      })
-      return state
-    }
-    case REMOVE_COMMENT : {
-      state.forEach(twitt => {
-        if(twitt.id ===  action.comment.twitId) twitt.comments = twitt.comments.filter(twit => twit !== action.commentId)
-      })
-      return state
-    }
     default:
     return state
   }
