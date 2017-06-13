@@ -1,6 +1,4 @@
-node_modules
 .idea
-.DS_Store
 .vscode
-package-lock.json
-npm-debug.log
+.DS_Store
+./vue/node_modules
