@@ -3,6 +3,7 @@
     <div>HELLLO</div>
     <login 
         v-if="!state.users.loggedInUser"
+        v-bind:login="loginUser"
         ></login>
   </div>
 </template>
@@ -21,7 +22,7 @@ export default {
     }
   },
   methods: {
-    loginUser: (userData) => {
+    loginUser(userData) {
       this.dispatch(userData)
     }
   }

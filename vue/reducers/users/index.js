@@ -3,7 +3,10 @@ const LOGOUT_USER = 'LOGOUT_USER'
 
 const initialState = {
   loggedInUser: null,
-  users: []
+  users: [{
+    username: 'testUser',
+    id: 'test-id'
+  }]
 }
 
 export const loginUser = (user) => ({type: LOGIN_USER, user})
