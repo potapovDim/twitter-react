@@ -6,7 +6,10 @@
 </template>
 
 <script>
+import {loginUser} from '../reducers/users'
 export default {
-  
+  methods: {
+    
+  }
 }
 </script>
